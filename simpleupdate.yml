@@ -4,9 +4,16 @@
   tasks:
 
   - name: update repo and cache
-    apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+    apt: 
+       update: yes
+       update_cache: yes 
+       cache_valid_time: 3600
+    
 
   - name: upgrade apt package
-    apt: pdate_cache=yes force_apt_get=yes cache_valid_time=3600
+    apt:     
+       upgrade: yes
+       update_cache: yes
+       cache_valid_time: 3600 
 
  
