@@ -5,8 +5,7 @@
 
   - name: update repo and cache
     apt: 
-      name: "*"
-      state: latest
+      update_cache: yes
     
 
   - name: upgrade apt package
