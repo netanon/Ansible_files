@@ -1,16 +1,14 @@
 - name: Just a simple apt-get update && apt-get upgrade
   hosts: all
-
+  become: yes
   tasks:
 
   - name: update repo and cache
     apt: 
       update_cache: yes
-      become: yes
-    
-
+      
   - name: upgrade apt package
     apt:     
        upgrade: dist 
-       become: yes
+       
  
